@@ -38,7 +38,3 @@ while True:
 
     # we congratulate the user when they find it
 print("You guessed in",guesses,"guesses. Nice")
-
-
-
-    
