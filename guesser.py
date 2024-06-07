@@ -1,11 +1,13 @@
 import random
 
+# we anticipate if user does not enter an integer
 try:
     top_range = int(input("Type a number: "))
 except ValueError:
      print("type in a number next time :)")
      quit()
 
+#we create a loop where we keep asking user an int greater than 0
 while True:
     if top_range <= 0:
         print("Please type a number greater than 0")
@@ -13,11 +15,13 @@ while True:
     else:
         break
 
+# assign a value to random number
 random_number = random.randint(1,top_range)
 
 # we keep track of all guesses made
 guesses = 0
 
+# create the gameplay loop
 while True:
     # guesses tracker
     guesses += 1
