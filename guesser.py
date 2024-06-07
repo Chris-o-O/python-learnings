@@ -1,17 +1,19 @@
 import random
 
 # we anticipate if user does not enter an integer
-try:
-    top_range = int(input("Type a number: "))
-except ValueError:
-     print("type in a number next time :)")
-     quit()
+
+while True:
+    try:
+        top_range = int(input("Type a number: "))
+    except ValueError:
+        print("type in an integer next time :)")
+    else:
+        break     
 
 #we create a loop where we keep asking user an int greater than 0
 while True:
     if top_range <= 0:
-        print("Please type a number greater than 0")
-        top_range = int(input("Type a number:"))
+        top_range = int(input("Please type a number greater than 0: "))
     else:
         break
 
@@ -27,7 +29,7 @@ while True:
     guesses += 1
 
     # user makes a guess
-    user_guess = int(input(f"Guess the number - between 1 and {top_range} :  "))
+    user_guess = int(input(f"Guess the number between 1 and {top_range} :  "))
 
     # we check if guess is correct or not
     if user_guess == random_number:
@@ -42,3 +44,14 @@ while True:
 
     # we congratulate the user when they find it
 print("You guessed in",guesses,"guesses. Nice")
+
+
+
+    
+
+
+
+
+
+
+
