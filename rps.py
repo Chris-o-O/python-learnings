@@ -4,7 +4,7 @@ import random
 user_score = 0
 cpu_score = 0
 
-user_intent = input("do you want to play rock paper scissors? ")
+user_intent = input("do you want to play rock paper scissors: yes or no?")
 
 if user_intent != "yes" and user_intent != "ok":
     quit()
