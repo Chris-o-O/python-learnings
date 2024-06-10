@@ -17,7 +17,9 @@ plays = [{"play":"rock"},
         {"play":"paper"},
         {"play":"scissors"}]
 
-cpu_play = plays[random.randrange(0,len(plays)-1)]["play"]
+cpu_play = plays[random.randrange(0,len(plays))]["play"]
+
+print(len(plays)-1)
 
 # user chooses a value
 
