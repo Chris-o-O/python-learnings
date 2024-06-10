@@ -13,13 +13,17 @@ else:
 
 # computer chooses a value
 
-plays = [{"play":"rock"},
-        {"play":"paper"},
-        {"play":"scissors"}]
+plays = ["rock","paper","scissors"]
 
-cpu_play = plays[random.randrange(0,len(plays))]["play"]
+cpu_play = plays[random.randrange(0,len(plays))]
 
-print(len(plays)-1)
+
+# alternative initialement prop
+#plays = [{"play":"rock"},
+#        {"play":"paper"},
+#        {"play":"scissors"}]
+
+#cpu_play = plays[random.randrange(0,len(plays))]["play"]
 
 # user chooses a value
 
@@ -32,7 +36,8 @@ while True:
         break     
 
 while True:
-    if user_play != "rock" and user_play != "paper" and user_play != "scissors":
+    #if user_play != "rock" and user_play != "paper" and user_play != "scissors":
+    if user_play not in plays: 
         user_play = input("type in one of those options: rock, paper or scissors? ")
     else:
         break
