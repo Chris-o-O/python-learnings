@@ -22,8 +22,8 @@ root.columnconfigure(0,weight=1)
 root.rowconfigure(0, weight=1)
 
 #setting up frame 1
-mainframe = ttk.Frame(root, padding="3 3 12 12")
-mainframe.grid(column=0, row=0) #sticky=(N, W, E, S)
+mainframe = ttk.Frame(root, padding="8 8 16 16")
+mainframe.grid(column=0, row=0) #sticky options=(N, W, E, S)
 
 #setting up url variable
 url = StringVar()
@@ -34,9 +34,9 @@ downloadnotif = StringVar()
 ttk.Label(mainframe,textvariable=downloadnotif).grid(column=2,row=2)
 
 #setting up static widgets inside frame 1 
-ttk.Label(mainframe, text="Youtube video: ").grid(column=0, row=1) #sticky=W
+ttk.Label(mainframe, text="Youtube video: ").grid(column=0, row=1) 
 
-ttk.Label(mainframe, text="option 1:").grid(column=0, row=2) #sticky=W
+ttk.Label(mainframe, text="option 1:").grid(column=0, row=2) 
 ttk.Button(mainframe,text="download",command=download).grid(column=1,row=2)
 
 #global format rules applicable for each widget inside frame 1 'mainframe'
@@ -46,7 +46,7 @@ for child in mainframe.winfo_children():
 
 #setting up frame 2
 #subframe = ttk.Frame(root, padding="3 3 12 12")
-#subframe.grid(column=0, row=1) #sticky=(N, W, E, S)
-#ttk.Label(subframe, text="test it").grid(column=1, row=3) #sticky=W
+#subframe.grid(column=0, row=1) 
+#ttk.Label(subframe, text="test it").grid(column=1, row=3) 
 
 root.mainloop()
